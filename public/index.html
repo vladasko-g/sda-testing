@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Testing</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Testing</h1>
+      <div>
+        <p data-testid="description" id="description">Some description text here.</p>
+        <button data-testid="change-desc-btn" id="change-desc-btn">change</button>
+      </div>
+    </div>
+
+    <script>
+      var desc = document.querySelector("#description");
+
+      document.querySelector("#change-desc-btn").onclick = function () {
+        desc.textContent = "Changed description!";
+      };
+    </script>
+  </body>
+</html>

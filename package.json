@@ -1,0 +1,25 @@
+{
+  "name": "sda-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest",
+    "testw": "jest --watch",
+    "crun": "cypress run",
+    "copen": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^9.2.0",
+    "@testing-library/cypress": "^8.0.2",
+    "jest": "^27.4.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "babel-jest": "^27.4.6"
+  },
+  "author": "vladasko",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
