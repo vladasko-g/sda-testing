@@ -37,6 +37,6 @@ describe("swapArrayIndexes", () => {
   });
 
   afterAll(() => {
-    isValidIndexModule.isValidIndex = originalIsValidIndex;
+    isValidIndexModule.isValidIndex = originalIsValidIndex; // mockRestore  only work with spyOn, so we need manual restore
   });
 });
