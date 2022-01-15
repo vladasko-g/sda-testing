@@ -1,9 +1,20 @@
-describe("anonymous calculator", () => {
-  it("can make calculations", () => {
-    console.log("cy", cy);
-
+describe("page", () => {
+  it("change description form test", () => {
     cy.visit("/");
-    cy.findByText(/^change$/).click();
-    cy.findByTestId("description").should("have.text", "Changed description!");
+
+    const desc = "desc";
+    const input = "input";
+
+    cy.findByTestId(desc).should("have.text", "initial description");
+
+    const newText = "new description";
+
+    cy.findByTestId(input).type(newText);
+    cy.findByText("change").click();
+    cy.findByTestId(desc).should((descEl) => {
+      const result = descEl.text();
+
+      expect(result).toEqual(newText);
+    });
   });
 });

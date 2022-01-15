@@ -23,7 +23,7 @@ describe("swapArrayIndexes", () => {
 
   beforeAll(() => {
     spy = jest.spyOn(isValidIndexModule, "isValidIndex");
-    spy.mockImplementation(() => true); // will call real function as well if no mockImplementation
+    spy.mockImplementation(() => true);
   });
 
   beforeEach(() => {

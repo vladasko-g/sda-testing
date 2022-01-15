@@ -5,16 +5,17 @@
     "start": "nodemon server.js",
     "test": "jest",
     "testw": "jest --watch",
-    "crun": "cypress run",
-    "copen": "cypress open"
+    "copen": "cypress open",
+    "crun": "cypress run"
   },
   "devDependencies": {
-    "cypress": "^9.2.0",
-    "@testing-library/cypress": "^8.0.2",
-    "jest": "^27.4.7",
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
-    "babel-jest": "^27.4.6"
+    "@testing-library/cypress": "^8.0.2",
+    "babel-jest": "^27.4.6",
+    "cypress": "^9.2.1",
+    "cypress-jest-adapter": "^0.1.1",
+    "jest": "^27.4.7"
   },
   "author": "vladasko",
   "license": "ISC",
