@@ -2,12 +2,20 @@
   "name": "sda-tests",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest",
+    "testw": "jest --watch"
   },
   "author": "vladasko",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "babel-jest": "^28.1.0",
+    "jest": "^28.1.0"
   }
 }
