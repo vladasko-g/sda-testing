@@ -30,11 +30,9 @@ describe("swapArrayIndexes", () => {
     isValidIndexModule.isValidIndex.mockClear();
   });
 
-  testCases.forEach(({ desc, i, j, arr, expected }) => {
-    test(desc, () => {
-      expect(swapArrayIndexes(arr, i, j)).toEqual(expected);
-      expect(isValidIndexModule.isValidIndex).toBeCalledTimes(2);
-    });
+  test.each(testCases)("$desc", ({ i, j, arr, expected }) => {
+    expect(swapArrayIndexes(arr, i, j)).toEqual(expected);
+    expect(isValidIndexModule.isValidIndex).toBeCalledTimes(2);
   });
 
   afterAll(() => {

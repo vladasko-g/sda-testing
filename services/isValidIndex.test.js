@@ -34,9 +34,7 @@ describe("isValidIndex", () => {
     },
   ];
 
-  testCases.forEach(({ desc, index, max, expected }) => {
-    test(desc, () => {
-      expect(isValidIndex(index, max)).toEqual(expected);
-    });
+  test.each(testCases)("$desc", ({ index, max, expected }) => {
+    expect(isValidIndex(index, max)).toEqual(expected);
   });
 });

@@ -31,9 +31,7 @@ const testCases = [
 ];
 
 describe("isArray", () => {
-  testCases.forEach(({ desc, input, expected }) => {
-    test(desc, () => {
-      expect(isArray(input)).toBe(expected);
-    });
+  test.each(testCases)("$desc", ({ input, expected }) => {
+    expect(isArray(input)).toBe(expected);
   });
 });
