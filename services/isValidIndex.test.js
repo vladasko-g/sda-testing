@@ -1,4 +1,4 @@
-import { isValidIndex } from "./is-valid-index";
+import { isValidIndex } from "./isValidIndex";
 
 describe("isValidIndex", () => {
   const testCases = [

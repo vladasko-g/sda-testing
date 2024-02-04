@@ -1,4 +1,4 @@
-import { isValidIndex } from "./is-valid-index";
+import { isValidIndex } from "./isValidIndex";
 
 export const swapArrayIndexes = (arr, i, j) => {
   const result = [...arr];

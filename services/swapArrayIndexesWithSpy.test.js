@@ -1,5 +1,5 @@
-import { swapArrayIndexes } from "./swap-array-indexes";
-import * as isValidIndexModule from "./is-valid-index";
+import { swapArrayIndexes } from "./swapArrayIndexes";
+import * as isValidIndexModule from "./isValidIndex";
 
 describe("swapArrayIndexes", () => {
   const testCases = [
@@ -19,10 +19,11 @@ describe("swapArrayIndexes", () => {
     },
   ];
 
-  const originalIsValidIndex = isValidIndexModule.isValidIndex;
+  let spy = null;
 
   beforeAll(() => {
-    isValidIndexModule.isValidIndex = jest.fn((i, max) => true);
+    spy = jest.spyOn(isValidIndexModule, "isValidIndex");
+    spy.mockImplementation(() => true);
   });
 
   beforeEach(() => {
@@ -37,6 +38,6 @@ describe("swapArrayIndexes", () => {
   });
 
   afterAll(() => {
-    isValidIndexModule.isValidIndex = originalIsValidIndex; // mockRestore  only work with spyOn, so we need manual restore
+    spy.mockRestore();
   });
 });

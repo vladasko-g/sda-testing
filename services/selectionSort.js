@@ -1,4 +1,4 @@
-import { swapArrayIndexes } from "./swap-array-indexes";
+import { swapArrayIndexes } from "./swapArrayIndexes";
 
 export const selectionSort = (arr) => {
   let result = [...arr];
