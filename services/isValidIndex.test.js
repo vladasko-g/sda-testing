@@ -27,7 +27,7 @@ describe("isValidIndex", () => {
       expected: false,
     },
     {
-      desc: "shoudl return true if valid",
+      desc: "should return true if valid",
       index: 2,
       max: 5,
       expected: true,

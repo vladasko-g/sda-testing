@@ -4,14 +4,14 @@ import * as isValidIndexModule from "./isValidIndex";
 describe("swapArrayIndexes", () => {
   const testCases = [
     {
-      desc: "1",
+      desc: "should swap first and second index values",
       arr: [0, 5, 6, 8],
       i: 0,
       j: 1,
       expected: [5, 0, 6, 8],
     },
     {
-      desc: "2",
+      desc: "should swap second and fourth index values",
       arr: [0, 5, null, 6, 8],
       i: 2,
       j: 4,
