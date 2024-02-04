@@ -7,7 +7,8 @@
     $npm test
 
   - test a single file
-    $npm test -- .\services\helpers.test.js
+    $npm test -- .\services\<test-name>.test.js
   
   - to run cypress test
+    $npm start
     $npm run copen
