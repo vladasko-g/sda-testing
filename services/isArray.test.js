@@ -1,4 +1,4 @@
-import { isArray } from "./helpers";
+import { isArray } from "./isArray";
 
 const testCases = [
   {
