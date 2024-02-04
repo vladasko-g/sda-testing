@@ -9,9 +9,7 @@ describe("selectionSort", () => {
     },
   ];
 
-  testCases.forEach(({ desc, arr, expected }) => {
-    test(desc, () => {
-      expect(selectionSort(arr)).toEqual(expected);
-    });
+  test.each(testCases)("$desc", ({ arr, expected }) => {
+    expect(selectionSort(arr)).toEqual(expected);
   });
 });

@@ -27,16 +27,14 @@ describe("isValidIndex", () => {
       expected: false,
     },
     {
-      desc: "shoudl return true if valid",
+      desc: "should return true if valid",
       index: 2,
       max: 5,
       expected: true,
     },
   ];
 
-  testCases.forEach(({ desc, index, max, expected }) => {
-    test(desc, () => {
-      expect(isValidIndex(index, max)).toEqual(expected);
-    });
+  test.each(testCases)("$desc", ({ index, max, expected }) => {
+    expect(isValidIndex(index, max)).toEqual(expected);
   });
 });
