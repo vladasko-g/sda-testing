@@ -5,10 +5,8 @@ const port = 3003;
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "public")));
-
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", (_, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
 });
 
 app.listen(port, () => {
