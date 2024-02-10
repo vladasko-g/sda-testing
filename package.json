@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "testw": "jest --watch"
+    "testw": "jest --watch",
+    "start": "nodemon server.js",
+    "copen": "cypress open",
+    "crun": "cypress run"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
+    "@testing-library/cypress": "^10.0.1",
     "babel-jest": "^27.4.6",
+    "cypress": "^13.6.4",
+    "cypress-jest-adapter": "^0.1.1",
     "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
   },
   "author": "vladasko",
   "license": "ISC"
