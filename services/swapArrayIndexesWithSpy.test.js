@@ -27,7 +27,7 @@ describe("swapArrayIndexes", () => {
   });
 
   beforeEach(() => {
-    isValidIndexModule.isValidIndex.mockClear();
+    spy.mockClear();
   });
 
   test.each(testCases)("$desc", ({ i, j, arr, expected }) => {
