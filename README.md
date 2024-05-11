@@ -4,7 +4,7 @@
 ### Unit tests
 
 - run all unit tests `$npm test`
-- run all unit tests and watch for changes `$npm testw`
+- run all unit tests and watch for changes `$npm run testw`
 - test a single file `$npm test -- .\services\<test-name>.test.js`
   
 ### End to end (E2E) tests
